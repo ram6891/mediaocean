@@ -1,0 +1,41 @@
+package org.medi.ocean.bill.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.medi.ocean.bill.model.Category;
+import org.medi.ocean.bill.model.Order;
+import org.medi.ocean.bill.model.Product;
+import org.medi.ocean.bill.model.ProductCategory;
+
+public class ProductService {
+	
+	public List<Product> getProducts(Order order) {
+		List<Product> products = new ArrayList<>();
+		for(Long productId : order.getProductIds()) {
+			products.add(getProductDetail(productId));
+		}
+		return products;
+	}
+	
+	private Product getProductDetail(Long productId) {
+		Product product = new Product();
+		if(productId == 1) {
+			product.setName("Lux");
+			product.setCategory(new ProductCategory(1L, Category.A, 10));
+			product.setProductId(productId);
+		}
+		else if(productId == 2) {
+			product.setName("Amul Milk");
+			product.setCategory(new ProductCategory(1L, Category.B, 10));
+			product.setProductId(productId);
+		}
+		else if(productId == 3) {
+			product.setName("Mobile");
+			product.setCategory(new ProductCategory(1L, Category.A, 10));
+			product.setProductId(productId);
+		}
+		return product;
+	}
+	
+}

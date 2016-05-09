@@ -1,0 +1,32 @@
+package org.medi.ocean.bill.model;
+
+import java.util.List;
+
+
+
+public class BillDetail {
+	
+	private Integer totalAmount;
+	private Integer totalServiceTax;
+	private List<ItemDetail> items;
+	
+	public int getTotalAmount() {
+		return totalAmount;
+	}
+	public void setTotalAmount(int totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+	public int getTotalServiceTax() {
+		return totalServiceTax;
+	}
+	public void setTotalServiceTax(int totalServiceTax) {
+		this.totalServiceTax = totalServiceTax;
+	}
+	public List<ItemDetail> getItems() {
+		return items;
+	}
+	public void setItems(List<ItemDetail> items) {
+		this.items = items;
+	}
+
+}

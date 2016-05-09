@@ -1,0 +1,33 @@
+package org.medi.ocean.bill.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class BillDetail {
+	
+	private Integer totalAmount;
+	private Integer totalServiceTax;
+	private List<ItemDetail> items = new ArrayList<>();
+	
+	public Integer getTotalAmount() {
+		return totalAmount;
+	}
+	public void setTotalAmount(Integer totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+	public Integer getTotalServiceTax() {
+		return totalServiceTax;
+	}
+	public void setTotalServiceTax(Integer totalServiceTax) {
+		this.totalServiceTax = totalServiceTax;
+	}
+	public List<ItemDetail> getItems() {
+		return items;
+	}
+	public void setItems(List<ItemDetail> items) {
+		this.items = items;
+	}
+
+}

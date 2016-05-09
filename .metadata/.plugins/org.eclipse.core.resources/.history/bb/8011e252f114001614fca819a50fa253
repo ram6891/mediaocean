@@ -1,0 +1,7 @@
+package org.medi.ocean.bill.model;
+
+public class State {
+	private Long  stateId;
+	private String stateName;
+	private 
+}

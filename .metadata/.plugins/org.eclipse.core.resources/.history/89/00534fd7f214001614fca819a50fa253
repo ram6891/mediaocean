@@ -1,0 +1,13 @@
+package org.medi.ocean.bill.service;
+
+import java.util.List;
+
+import org.medi.ocean.bill.model.Product;
+
+public class ProductService implements IProductService{
+	
+	public List<Product> getProducts(Order order) {
+		
+	}
+	
+}

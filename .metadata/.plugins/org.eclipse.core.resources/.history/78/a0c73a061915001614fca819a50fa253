@@ -1,0 +1,28 @@
+package org.medi.ocean.bill.service;
+
+import org.medi.ocean.bill.model.Product;
+import org.medi.ocean.bill.model.StateDetail;
+import org.medi.ocean.bill.service.impl.StateTaxDetailService;
+
+public class TaxCalculateService implements ITaxCalculateService{
+	
+	public Integer calculateTax(Product product, Long  shippingStateId, boolean taxBasedOnCategory)  {
+		if(taxBasedOnCategory) {
+			return calculateTaxOnCategory(product);
+		}
+		else{
+			return calculateTaxBasedOnState(product, shippingStateId);
+		}
+	}
+	
+	private Integer calculateTaxOnCategory(Product  product) {
+		return product.getPrice()* product.getCategory().getSaleTaxPercentage()/100;
+	}
+	
+	private Integer calculateTaxBasedOnState(Product product, Long shippingStateId)  {
+		StateTaxDetailService service = new StateTaxDetailService();
+		StateDetail  detail = service.getStateTax(shippingStateId);
+		return product.getPrice()* detail.getSaleTaxPercentage()/100;
+	}
+
+}

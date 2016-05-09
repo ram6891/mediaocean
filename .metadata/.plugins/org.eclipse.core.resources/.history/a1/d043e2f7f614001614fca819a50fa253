@@ -1,0 +1,13 @@
+package org.medi.ocean.bill.service;
+
+public class TaxCalculateService {
+	
+	public Integer calculateTaxOnCategory(Product  product) {
+		
+	}
+	
+	public Integer calculateTaxBasedOnState()  {
+		
+	}
+
+}

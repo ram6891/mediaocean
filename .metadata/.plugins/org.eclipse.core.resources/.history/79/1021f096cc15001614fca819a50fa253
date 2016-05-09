@@ -1,0 +1,37 @@
+package org.medi.ocean.service;
+
+import java.util.Arrays;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.medi.ocean.bill.model.BillDetail;
+import org.medi.ocean.bill.model.Order;
+import org.medi.ocean.bill.service.IBillService;
+import org.medi.ocean.bill.service.impl.BillServiceImpl;
+
+import junit.framework.TestCase;
+
+public class BillServiceImplTest extends TestCase{
+	private IBillService billServiceImpl;
+	
+	@Before
+	public void setUp() {
+		billServiceImpl = new BillServiceImpl();
+	}
+
+	@After
+	public void tearDown() {
+		billServiceImpl = new BillServiceImpl();
+	}
+
+	public void testGenerateBillAndTaxBasedOnCategoryA() {
+		Order order = new Order();
+		order.setOrderId(1L);
+		order.setShippingStateId(1L);
+		order.setProductIds(Arrays.asList(1L));
+		BillDetail billDetail = billServiceImpl.generateItemisedBill(order, true);
+		Assert.assertEquals(expected, billDetail.getTotalServiceTax());
+		
+	}
+}

@@ -1,0 +1,23 @@
+package org.medi.ocean.bill.model;
+
+
+
+public class Product {
+
+	private String name;
+	private Long productId;
+	private Category 
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Long getProductId() {
+		return productId;
+	}
+	public void setProductId(Long productId) {
+		this.productId = productId;
+	}
+}

@@ -1,0 +1,15 @@
+package org.medi.ocean.bill.service;
+
+import org.medi.ocean.bill.model.Product;
+
+public class TaxCalculateService {
+	
+	public Integer calculateTaxOnCategory(Product  product) {
+		return product.getPrice()* product.getCategory().getSaleTaxPercentage()/100;
+	}
+	
+	public Integer calculateTaxBasedOnState(Product product)  {
+		
+	}
+
+}

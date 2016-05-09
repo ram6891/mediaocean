@@ -1,0 +1,12 @@
+package org.medi.ocean.bill.service;
+
+import org.medi.ocean.bill.model.BillDetail;
+import org.medi.ocean.bill.model.Order;
+
+public class BillService {
+	
+	public BillDetail generateItemisedBill(Order order) {
+		
+	}
+
+}

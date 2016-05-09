@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+C:\Users\kaswan\mediocean\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1621365544.index
+1009600293.index
+3918988407.index
+2239471158.index
+3653553831.index
+1264609401.index
+1730520901.index

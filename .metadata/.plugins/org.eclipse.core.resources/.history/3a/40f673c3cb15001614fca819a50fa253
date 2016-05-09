@@ -1,0 +1,22 @@
+package org.medi.ocean.service;
+
+import org.junit.After;
+import org.junit.Before;
+import org.medi.ocean.bill.service.impl.BillServiceImpl;
+
+import junit.framework.TestCase;
+
+public class BillServiceImplTest extends TestCase{
+	private BillServiceImpl billServiceImpl;
+	
+	@Before
+	public void setUp() {
+		billServiceImpl = new BillServiceImpl();
+	}
+
+	@After
+	public void tearDown() {
+		billServiceImpl = new BillServiceImpl();
+	}
+
+}

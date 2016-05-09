@@ -1,0 +1,28 @@
+package org.medi.ocean.bill.model;
+
+public class ItemDetail {
+	
+	private Product product;
+	private Integer serviceTax;
+	private Integer totalAmount;
+	
+	public Product getProduct() {
+		return product;
+	}
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+	public Integer getServiceTax() {
+		return serviceTax;
+	}
+	public void setServiceTax(Integer serviceTax) {
+		this.serviceTax = serviceTax;
+	}
+	public Integer getTotalAmount() {
+		return totalAmount;
+	}
+	public void setTotalAmount(Integer totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+}

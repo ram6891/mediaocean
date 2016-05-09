@@ -1,0 +1,28 @@
+package org.medi.ocean.bill.model;
+
+import java.util.List;
+
+public class Order {
+	private Long  orderId;
+	private List<Integer> productIds;
+	
+	public Long getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
+	}
+	public List<Integer> getProductIds() {
+		return productIds;
+	}
+	public void setProductIds(List<Integer> productIds) {
+		this.productIds = productIds;
+	}
+	public String getShippingState() {
+		return shippingState;
+	}
+	public void setShippingState(String shippingState) {
+		this.shippingState = shippingState;
+	}
+	private String shippingState;
+}

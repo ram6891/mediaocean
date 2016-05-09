@@ -1,0 +1,12 @@
+package org.medi.ocean.service;
+
+import junit.framework.TestCase;
+
+
+public class ProductServiceImplTest extends TestCase{
+	
+	
+	
+	
+
+}

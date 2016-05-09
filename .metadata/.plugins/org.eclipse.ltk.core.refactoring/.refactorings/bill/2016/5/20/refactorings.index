@@ -1,0 +1,18 @@
+1462693588789	Rename type 'StateTaxInformation'
+1462693739194	Delete element
+1462694600373	Delete element
+1462696163492	Rename type 'TaxService'
+1462696748462	Rename field 'stateTaxDetailId'
+1462696755393	Rename type 'StateTaxDetail'
+1462696872870	Rename field 'shippingState'
+1462697377879	Rename type 'ItemBill'
+1462710774280	Move compilation unit
+1462710781305	Move compilation unit
+1462710785608	Move compilation unit
+1462710790555	Move compilation unit
+1462711171264	Rename type 'BillService'
+1462711179442	Rename type 'ProductService'
+1462711185420	Rename type 'StateTaxDetailService'
+1462711192554	Rename type 'TaxCalculateService'
+1462786862944	Rename type 'ProductServiceImpl'
+1462787373636	Delete element

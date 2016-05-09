@@ -1,0 +1,21 @@
+package org.medi.ocean.bill.resources;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.medi.ocean.bill.model.BillDetail;
+import org.medi.ocean.bill.service.BillService;
+
+@Path("/")
+public class BillResource {
+
+	@GET
+	@Path("/bill")
+	@Produces(MediaType.APPLICATION_JSON)
+	public BillDetail getGeneratedBill() {
+		BillService billService = new  BillService();
+		return billService.generateItemisedBill(order, taxBasedOnCategory);
+	}
+}

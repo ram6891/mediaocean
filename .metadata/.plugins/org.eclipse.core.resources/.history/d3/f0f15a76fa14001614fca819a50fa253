@@ -1,0 +1,9 @@
+package org.medi.ocean.bill.model;
+
+public class ItemDetail {
+	
+	private Product product;
+	private Integer serviceTax;
+	private Integer totalAmount;
+
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean id="billService" class="org.medi.ocean.bill.service.impl.BillServiceImpl">
+<bean id="helloBeanB" class="org.medi.ocean.bill.service.impl.ProductServiceImpl">
+<bean id="helloBeanB" class="org.medi.ocean.bill.service.impl.StateTaxDetailServiceImpl">
+<bean id="helloBeanB" class="org.medi.ocean.bill.service.impl.TaxCalculateServiceImpl">

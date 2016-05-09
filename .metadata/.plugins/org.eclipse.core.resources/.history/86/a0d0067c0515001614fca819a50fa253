@@ -1,0 +1,32 @@
+package org.medi.ocean.bill.resources;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.medi.ocean.bill.model.BillDetail;
+import org.medi.ocean.bill.model.Order;
+import org.medi.ocean.bill.service.BillService;
+
+@Path("/")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
+public class BillResource {
+
+	@POST
+	@Path("/bill")
+	public BillDetail getGeneratedBillOnCategoryTax(Order order) {
+		BillService billService = new  BillService();
+		return billService.generateItemisedBill(order, true);
+	}
+	
+	@POST
+	@Path("/bill")
+	public BillDetail getGeneratedBillOnStateTax(Order  order) {
+		BillService billService = new  BillService();
+		return billService.generateItemisedBill(order, false);
+	}
+}

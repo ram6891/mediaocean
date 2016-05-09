@@ -1,0 +1,26 @@
+package org.medi.ocean.bill.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.medi.ocean.bill.model.BillDetail;
+import org.medi.ocean.bill.model.ItemDetail;
+import org.medi.ocean.bill.model.Order;
+
+public class BillService {
+	
+	public BillDetail generateItemisedBillBasedOnCategorySaleTax(Order order) {
+		BillDetail billDetail = new BillDetail();
+		int totalAmount  =  0;
+		int totalServiceTax = 0;
+		List<ItemDetail> items =  new ArrayList<>();
+		ProductService productService = new ProductService();
+//		StateTaxDetailService stateTaxDetailService = new StateTaxDetailService();
+//		StateDetail stateDetail = stateTaxDetailService.getStateTax(order.getShippingStateId());
+		for(Long productId: order.getProductIds()) {
+			productService.getProduct(productId);
+		}
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package org.medi.ocean.bill.model;
+
+public class StateTaxDetail {
+	private Long stateTaxDetailId;
+	private String stateName;
+	private Integer saleTaxPercentage;
+	
+	public Long getStateTaxDetailId() {
+		return stateTaxDetailId;
+	}
+	public void setStateTaxDetailId(Long stateTaxDetailId) {
+		this.stateTaxDetailId = stateTaxDetailId;
+	}
+	public String getStateName() {
+		return stateName;
+	}
+	public void setStateName(String stateName) {
+		this.stateName = stateName;
+	}
+	public Integer getSaleTaxPercentage() {
+		return saleTaxPercentage;
+	}
+	public void setSaleTaxPercentage(Integer saleTaxPercentage) {
+		this.saleTaxPercentage = saleTaxPercentage;
+	}
+}

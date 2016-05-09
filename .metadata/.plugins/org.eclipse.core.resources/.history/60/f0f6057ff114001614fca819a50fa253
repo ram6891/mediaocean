@@ -1,0 +1,10 @@
+package org.medi.ocean.bill.model;
+
+public class ProductCategory {
+	enum Category {A, B, C}
+	
+	private Long categoryId;
+	private Category category;
+	private Integer saleTaxPercentage;
+
+}

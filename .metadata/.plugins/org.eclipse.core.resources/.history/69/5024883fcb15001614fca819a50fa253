@@ -1,0 +1,25 @@
+package org.medi.ocean.service;
+
+import org.junit.After;
+import org.junit.Before;
+import org.medi.ocean.bill.service.IProductService;
+import org.medi.ocean.bill.service.impl.ProductServiceImpl;
+
+import junit.framework.TestCase;
+
+
+public class ProductServiceImplTest extends TestCase{
+	private IProductService productService;
+	
+	@Before
+	public void setUp() {
+		productService = new ProductServiceImpl();
+	}
+	
+	@After
+	public void tearDown() {
+		productService = new ProductServiceImpl();
+	}
+
+
+}

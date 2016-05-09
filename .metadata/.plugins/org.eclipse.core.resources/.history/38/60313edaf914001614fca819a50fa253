@@ -1,0 +1,11 @@
+package org.medi.ocean.bill.model;
+
+import java.util.List;
+
+public class BillDetail {
+	
+	private int totalAmount;
+	private int totalServiceTax;
+	private List<ItemBill> item
+
+}

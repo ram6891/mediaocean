@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BillServiceImplTest" project="bill" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="org.medi.ocean.service.BillServiceImplTest" time="0.006">
+    <testcase name="testGenerateBillAndTaxBasedOnCategoryA" classname="org.medi.ocean.service.BillServiceImplTest" time="0.005"/>
+    <testcase name="testGenerateBillAndTaxBasedOnCategoryB" classname="org.medi.ocean.service.BillServiceImplTest" time="0.0"/>
+    <testcase name="testGenerateBillAndTaxBasedOnCategoryC" classname="org.medi.ocean.service.BillServiceImplTest" time="0.001"/>
+  </testsuite>
+</testrun>

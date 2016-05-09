@@ -1,0 +1,8 @@
+package org.medi.ocean.bill.model;
+
+public class StateTaxDetail {
+	private Long stateTaxDetailId;
+	private String stateName;
+	private Integer saleTaxPercentage;
+	
+}

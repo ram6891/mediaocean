@@ -1,0 +1,18 @@
+package org.medi.ocean.bill.service;
+
+public class StateTaxDetailService {
+	
+	public Integer getStateTax(String stateName) {
+		int saleTax  =  0;
+		if("Delhi".equalsIgnoreCase(stateName)) {
+			return  10;
+		}
+		else if("UP".equalsIgnoreCase(stateName)) {
+			return  20;
+		}
+		else if("Rajasthan".equalsIgnoreCase(stateName)) {
+			return  30;
+		}
+	}
+
+}

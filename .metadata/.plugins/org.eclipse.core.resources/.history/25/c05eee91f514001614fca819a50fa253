@@ -1,0 +1,20 @@
+package org.medi.ocean.bill.service;
+
+import java.util.List;
+
+import org.medi.ocean.bill.model.Order;
+import org.medi.ocean.bill.model.Product;
+
+public class ProductService {
+	
+	public List<Product> getProducts(Order order) {
+		order.getProductIds()
+	}
+	
+	private Product getProductDetail(int productId) {
+		Product product = new Product();
+		product.setName("Lux");
+		product.
+	}
+	
+}

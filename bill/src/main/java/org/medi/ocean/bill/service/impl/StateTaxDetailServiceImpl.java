@@ -1,0 +1,28 @@
+package org.medi.ocean.bill.service.impl;
+
+import org.medi.ocean.bill.model.StateDetail;
+import org.medi.ocean.bill.service.IStateTaxDetailService;
+
+public class StateTaxDetailServiceImpl implements IStateTaxDetailService{
+	
+	public StateDetail getStateTax(Long shippingStateId) {
+		StateDetail stateDetail = new StateDetail();
+		if(shippingStateId == 1) {
+			stateDetail.setStateTaxDetailId(shippingStateId);
+			stateDetail.setStateName("Delhi");
+			stateDetail.setSaleTaxPercentage(10);
+		}
+		else if(shippingStateId == 2) {
+			stateDetail.setStateTaxDetailId(shippingStateId);
+			stateDetail.setStateName("UP");
+			stateDetail.setSaleTaxPercentage(20);
+		}
+		else if(shippingStateId == 3) {
+			stateDetail.setStateTaxDetailId(shippingStateId);
+			stateDetail.setStateName("Rajasthan");
+			stateDetail.setSaleTaxPercentage(30);
+		}
+		return stateDetail;
+	}
+
+}

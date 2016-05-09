@@ -1,0 +1,11 @@
+package org.medi.ocean.bill.resources;
+
+import javax.ws.rs.Path;
+
+@Path("bill")
+public class BillResource {
+
+	public String getGeneratedBill() {
+		return "Bill";
+	}
+}

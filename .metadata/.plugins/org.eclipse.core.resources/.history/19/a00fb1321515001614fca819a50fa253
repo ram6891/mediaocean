@@ -1,0 +1,68 @@
+package org.medi.ocean.bill.resources;
+
+import java.util.Arrays;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.medi.ocean.bill.model.BillDetail;
+import org.medi.ocean.bill.model.Order;
+import org.medi.ocean.bill.service.BillService;
+
+@Path("/generate")
+public class BillResource {
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getVa(){
+		return "Hello";
+	}
+	
+	
+	@GET
+	@Path("/billbas")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Order getValue(){
+		Order o = new Order();
+		o.setProductIds(Arrays.asList(1L,2L,3L));
+		o.setOrderId(1L);
+		o.setShippingStateId(1L);
+		return o;
+	}
+	
+	
+	@POST
+	@Path("/billexcept")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public BillDetail getGenerated(Order order) {
+		BillDetail b = new BillDetail();
+		b.setTotalAmount(12);
+		b.setTotalServiceTax(3);
+		return b;
+		
+	}
+	
+
+	@POST
+	@Path("/billBasedOnCategory")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public BillDetail getGeneratedBillOnCategoryTax(Order order) {
+		BillService billService = new  BillService();
+		return billService.generateItemisedBill(order, true);
+	}
+	
+	@POST
+	@Path("/billBasedOnStateTax")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public BillDetail getGeneratedBillOnStateTax(Order  order) {
+		BillService billService = new  BillService();
+		return billService.generateItemisedBill(order, false);
+	}
+}

@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [09/May/2016:08:48:37 +0530] "POST /bill/webapi/billBasedOnStateTax HTTP/1.1" 500 4579
+127.0.0.1 - - [09/May/2016:08:50:04 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [09/May/2016:08:50:04 +0530] "GET /bill/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [09/May/2016:08:50:08 +0530] "POST /bill/webapi/billBasedOnStateTax HTTP/1.1" 200 465
+0:0:0:0:0:0:0:1 - - [09/May/2016:08:50:53 +0530] "POST /bill/webapi/billBasedOnStateTax HTTP/1.1" 200 467
+0:0:0:0:0:0:0:1 - - [09/May/2016:14:47:59 +0530] "POST /bill/webapi/billBasedOnStateTax HTTP/1.1" 200 467
+0:0:0:0:0:0:0:1 - - [09/May/2016:14:48:00 +0530] "POST /bill/webapi/billBasedOnStateTax HTTP/1.1" 200 467
