@@ -16,10 +16,6 @@ public class BillServiceImpl implements IBillService{
 	private ITaxCalculateService calculateService;
 	private IProductService productService;
 	
-	public BillServiceImpl() {
-		calculateService = ApplicationContextProvider.getBean(ITaxCalculateService.class);
-		productService =  ApplicationContextProvider.getBean(IProductService.class);
-	}
 	public BillDetail generateItemisedBill(Order order, boolean taxBasedOnCategory) {
 		
 		BillDetail billDetail = new BillDetail();
@@ -31,8 +27,14 @@ public class BillServiceImpl implements IBillService{
 		
 		for(Long productId: order.getProductIds()) {
 			ItemDetail detail = new ItemDetail();
+			if(productService == null) {
+				productService =  ApplicationContextProvider.getBean(IProductService.class);
+			}
 			product =productService.getProduct(productId);
 			totalAmount += product.getPrice();
+			if(calculateService == null) {
+				calculateService =  ApplicationContextProvider.getBean(ITaxCalculateService.class);
+			}
 			serviceTax = calculateService.calculateTax(product, order.getShippingStateId(),taxBasedOnCategory);
 			totalServiceTax  += serviceTax;
 			detail.setProduct(product);

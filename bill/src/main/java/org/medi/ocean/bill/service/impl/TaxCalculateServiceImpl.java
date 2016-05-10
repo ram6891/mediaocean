@@ -9,9 +9,6 @@ import org.medi.ocean.bill.service.context.ApplicationContextProvider;
 public class TaxCalculateServiceImpl implements ITaxCalculateService{
 	private IStateTaxDetailService stateTaxDetailService;
 	
-	public TaxCalculateServiceImpl() {
-		stateTaxDetailService = ApplicationContextProvider.getBean(IStateTaxDetailService.class);
-	}
 	
 	public Integer calculateTax(Product product, Long  shippingStateId, boolean taxBasedOnCategory)  {
 		if(taxBasedOnCategory) {
@@ -27,6 +24,9 @@ public class TaxCalculateServiceImpl implements ITaxCalculateService{
 	}
 	
 	private Integer calculateTaxBasedOnState(Product product, Long shippingStateId)  {
+		if(stateTaxDetailService == null) {
+			stateTaxDetailService = ApplicationContextProvider.getBean(IStateTaxDetailService.class);
+		}
 		StateDetail  detail = stateTaxDetailService.getStateTax(shippingStateId);
 		return product.getPrice()* detail.getSaleTaxPercentage()/100;
 	}
